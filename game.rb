@@ -1,5 +1,4 @@
-#rock, paper scissors
-require 'pry'
+# A rock, paper scissors console game in Ruby
 
 # determines who won the game
 # inputs: integers representing game choices for p (player), c(computer)
