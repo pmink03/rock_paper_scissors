@@ -20,23 +20,11 @@ end
 # gets input from player to determine if they want to continue playing
 # outputs: true to keep playing or false to quit
 def play_again?()
-    keep_playing = false
-    keep_looping = true
-    
-    # gonna loop until you give me a valid answer
-    begin
-      puts "Play again? (Y/N)"
-      play_again = gets.chomp
-      if(play_again =~ /^[Nn]$/)
-        keep_playing =false
-        keep_looping = false
-      elsif(play_again =~ /^[Yy]$/)
-        keep_playing = true
-        keep_looping = false
-      end
-    end while keep_looping == true
-    
-    return keep_playing
+  keep_playing = true
+  # keep playing unless user enters 'y' to quit
+    puts "Play again? (Y/N)"
+    keep_playing = false if gets.chomp.downcase != 'y'  
+  return keep_playing
 end
 
 # gets the player's game move and convert it to an integer
